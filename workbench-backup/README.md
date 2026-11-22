@@ -24,6 +24,18 @@ To use a local cache for archives, add `-CacheDirectory 'E:\workbench-archive-ca
 
 The script writes `restore-receipt.json`. A successful artifact restore does not by itself verify every GUI, install EMBA, configure Codex, integrate the standalone tools with REA, or establish that a new device or image can be analyzed. See `first-party/README.md` for the original machine's dated checks, and run relevant tests on the new machine.
 
+## Repository library
+
+`repository-library.json` is the editable catalog of the 17 source repositories in this snapshot. Each entry records a name, GitHub URL, exact commit, and destination (`sources` or `root`). `Restore-Workbench.ps1 -IncludeSources` reads this library through `Restore-Sources.ps1`; adding a valid entry makes it part of the next full source restore. Check an upstream project's license before redistributing its files.
+
+To fetch the sources independently, create an empty destination folder and run:
+
+```powershell
+.\Restore-Sources.ps1 -Destination 'D:\EngineeringSources'
+```
+
+To fetch selected entries, add `-Only 'jadx','7zip'`. The script requires Git and network access, checks out the exact recorded commits, and refuses to overwrite existing destinations. If a fetch fails, its partial directory remains for inspection. These are shallow checkouts without submodules or Git LFS content; an upstream repository or commit may later become unavailable. `sources-inventory.md` is a historical snapshot, while the JSON library is authoritative for future restores. Publisher-only tools without established source repositories are represented by package entries in `artifacts.json`, not invented repository entries.
+
 ## Integrity and limitations
 
 The manifest labels checksum provenance. For packages without a publisher-supplied checksum, the saved SHA-256 identifies the previously obtained archive but is not an independent publisher authenticity check. Publisher URLs can change or disappear; mismatched or missing downloads fail rather than silently changing versions. The current source list covers the source checkouts present when captured, not necessarily the matching source for every installed binary.

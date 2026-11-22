@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "description": "Pinned source checkouts captured from the workbench on 2026-11-21. Add one entry per repository; binary package downloads are in artifacts.json.",
+  "repositories": [
+    {
+      "name": "7zip",
+      "url": "https://github.com/ip7z/7zip.git",
+      "commit": "d3296e39e1f1f92c7b41c0c3848e65640428d42d",
+      "location": "sources"
+    },
+    {
+      "name": "assetripper",
+      "url": "https://github.com/AssetRipper/AssetRipper.git",
+      "commit": "9dc1582ff43f0eebd2363aba98060c5d0a3da4f4",
+      "location": "sources"
+    },
+    {
+      "name": "dependencies",
+      "url": "https://github.com/lucasg/Dependencies.git",
+      "commit": "1997a40000b77bd3326cbc33672a7b9f78bb23f3",
+      "location": "sources"
+    },
+    {
+      "name": "detect-it-easy",
+      "url": "https://github.com/horsicq/Detect-It-Easy.git",
+      "commit": "196c0f56bf53ad8a74b0b56c54829d74b810057e",
+      "location": "sources"
+    },
+    {
+      "name": "dnspyex",
+      "url": "https://github.com/dnSpyEx/dnSpy.git",
+      "commit": "bb09d2c54718e0f73d01d2e1085ddb8772aee555",
+      "location": "sources"
+    },
+    {
+      "name": "fmodel",
+      "url": "https://github.com/4sval/FModel.git",
+      "commit": "70631fbf9aef03410c96635762a8d5c4fdd5d95d",
+      "location": "sources"
+    },
+    {
+      "name": "godot-re-tools",
+      "url": "https://github.com/GDRETools/gdsdecomp.git",
+      "commit": "e2780fcc73ab14083967d3945e513d1f6af1dbd0",
+      "location": "sources"
+    },
+    {
+      "name": "httrack",
+      "url": "https://github.com/xroche/httrack.git",
+      "commit": "0ea3f519022f0e1bc63c0ee9e65258dd54ddb5fe",
+      "location": "sources"
+    },
+    {
+      "name": "imhex",
+      "url": "https://github.com/WerWolv/ImHex.git",
+      "commit": "a761d24e41b269dd2bce18f5218accfabac4684a",
+      "location": "sources"
+    },
+    {
+      "name": "jadx",
+      "url": "https://github.com/skylot/jadx.git",
+      "commit": "3cbbc2348141b7b51dbec2b227f334d6785547e6",
+      "location": "sources"
+    },
+    {
+      "name": "playwright",
+      "url": "https://github.com/microsoft/playwright.git",
+      "commit": "049226728d2da8054db18b04782a9848b755855e",
+      "location": "sources"
+    },
+    {
+      "name": "qemu",
+      "url": "https://github.com/qemu/qemu.git",
+      "commit": "8f66cb79044c370e3813c56ceb7a75a5ca2d0a0e",
+      "location": "sources"
+    },
+    {
+      "name": "renderdoc",
+      "url": "https://github.com/baldurk/renderdoc.git",
+      "commit": "5ad608809c9028da9f5c5082397cb6afe9c8dd17",
+      "location": "sources"
+    },
+    {
+      "name": "uefitool",
+      "url": "https://github.com/LongSoft/UEFITool.git",
+      "commit": "de73942df908b9466c055e15108ac4e4c0b1688c",
+      "location": "sources"
+    },
+    {
+      "name": "x64dbg",
+      "url": "https://github.com/x64dbg/x64dbg.git",
+      "commit": "d3c12dbe92e61bc741c69c1621e668cb4413ac08",
+      "location": "sources"
+    },
+    {
+      "name": "emba-source",
+      "url": "https://github.com/e-m-b-a/emba.git",
+      "commit": "b22a1d6a42d66d86969b6a2fdf6d1bd8e22dd1eb",
+      "location": "root"
+    },
+    {
+      "name": "rea-mcp",
+      "url": "https://github.com/zionportal/rea-mcp.git",
+      "commit": "6136c6f3babd5cf2ada552341003829d41a06f71",
+      "location": "root"
+    }
+  ]
+}

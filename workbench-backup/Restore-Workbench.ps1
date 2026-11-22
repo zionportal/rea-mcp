@@ -99,26 +99,9 @@ try {
     }
 
     if ($IncludeSources) {
-        if (-not (Get-Command git -ErrorAction SilentlyContinue)) { throw 'Git is required to restore source snapshots.' }
-        $gitSources = @($manifest.sources) + @([pscustomobject]@{directory='emba-source';url=$manifest.emba_source.url;commit=$manifest.emba_source.commit}) + @([pscustomobject]@{directory='rea-mcp';url='https://github.com/zionportal/rea-mcp.git';commit='6136c6f3babd5cf2ada552341003829d41a06f71'})
-        $oldLfs = $env:GIT_LFS_SKIP_SMUDGE; $env:GIT_LFS_SKIP_SMUDGE = '1'
-        try {
-            foreach ($src in $gitSources) {
-                if ($src.directory -notmatch '^[A-Za-z0-9._-]+$' -or $src.directory -in @('.', '..') -or $src.commit -notmatch '^[0-9a-f]{40}$' -or $src.url -notmatch '^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\.git$') { throw 'Invalid source entry in manifest.' }
-                $parentDir = if ($src.directory -in @('emba-source','rea-mcp')) { $dest } else { Join-Path $dest 'sources' }
-                New-Item -ItemType Directory -Path $parentDir -Force | Out-Null
-                $checkout = Join-Path $parentDir $src.directory
-                if (Test-Path -LiteralPath $checkout) { throw "Source destination already exists: $checkout" }
-                & git init --quiet $checkout; if ($LASTEXITCODE -ne 0) { throw 'git init failed.' }
-                & git -C $checkout remote add origin $src.url; if ($LASTEXITCODE -ne 0) { throw 'git remote failed.' }
-                & git -C $checkout -c core.longpaths=true fetch --quiet --depth 1 origin $src.commit; if ($LASTEXITCODE -ne 0) { throw "Source fetch failed: $($src.directory)" }
-                & git -C $checkout -c core.longpaths=true checkout --quiet --detach FETCH_HEAD; if ($LASTEXITCODE -ne 0) { throw "Source checkout failed: $($src.directory)" }
-                $actual = (& git -C $checkout rev-parse HEAD).Trim()
-                if ($actual -cne $src.commit) { throw "Source commit mismatch: $($src.directory)" }
-                Write-Host "Restored source $($src.directory)"
-            }
-            Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'sources-inventory.md') -Destination (Join-Path $dest 'sources\README.md')
-        } finally { $env:GIT_LFS_SKIP_SMUDGE = $oldLfs }
+        & (Join-Path $PSScriptRoot 'Restore-Sources.ps1') -Destination $dest
+        New-Item -ItemType Directory -Path (Join-Path $dest 'sources') -Force | Out-Null
+        Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'sources-inventory.md') -Destination (Join-Path $dest 'sources\README.md')
     }
     $receipt = [ordered]@{status='selected_artifacts_restored'; partial=[bool]$Only; artifacts=@($completed); sources_requested=[bool]$IncludeSources; playwright_requested=[bool]$InstallPlaywright; emba_ready=$false; mcp_registered=$false; created_utc=[DateTime]::UtcNow.ToString('o')}
     $receipt | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $dest 'restore-receipt.json') -Encoding utf8
