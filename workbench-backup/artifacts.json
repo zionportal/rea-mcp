@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-11-21",
+  "repository": "zionportal/rea-mcp",
+  "notes": [
+    "Hashes marked local_sha256 were computed from the downloaded copy, not independently authenticated by a publisher checksum.",
+    "Sources are shallow default-branch snapshots and are not verified to match release binaries.",
+    "Third-party binaries and source are not included in this repository."
+  ],
+  "archives": [
+    {
+      "file": "7z2606-extra.7z",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-extra.7z",
+      "destination": "7zip-extra",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 1758340,
+      "sha256": "396c180f12d2247c24b0b1fcd482c6fc2a2700f61211ffede1061dd971f5e104",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "7z2606-x64.exe",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-x64.exe",
+      "destination": "7zip",
+      "method": "seven_sfx",
+      "strip_components": 0,
+      "size": 1659704,
+      "sha256": "9b697f65ecc2d9b0152f5ee96d72dde522a7827690349d9307935dacf40f42ec",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "node.zip",
+      "url": "https://nodejs.org/dist/v24.22.3/node-v24.22.3-win-x64.zip",
+      "destination": "node-v24.22.3-win-x64",
+      "method": "tar",
+      "strip_components": 1,
+      "size": 37762649,
+      "sha256": "e612af99f626ab415ea225af6bce5c971feb448cb5cae250bb1c3fa50c5f7d9f",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "jdk.zip",
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1%2B2/OpenJDK21U-jdk_x64_windows_hotspot_21.0.13.1_2.zip",
+      "destination": "jdk",
+      "method": "tar",
+      "strip_components": 1,
+      "size": 205447663,
+      "sha256": "bbebea1469996b276683c9299c227b294f85c847039c82633218186a4ad4fbf2",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "rea-agents-6.9.0.tgz",
+      "url": "https://registry.npmjs.org/rea-agents/-/rea-agents-6.9.0.tgz",
+      "destination": "runtime-packed",
+      "method": "tar",
+      "strip_components": 1,
+      "size": 41851672,
+      "sha256": "322338a1505e2557702a16012e7d46abdb5729641d98938662762dfbfb79262a",
+      "sha256_provenance": "registry_sha512"
+    },
+    {
+      "file": "jadx-headless-mcp-0.7.1-all.jar",
+      "url": "https://github.com/1013503897/jadx-headless-mcp/releases/download/v0.7.1/jadx-headless-mcp-0.7.1-all.jar",
+      "destination": "downloads",
+      "method": "keep",
+      "strip_components": 0,
+      "size": 42619858,
+      "sha256": "6e5eacf500b64292bfb73c49797c1958f6ee44646e43e868039ae7feb573ff75",
+      "sha256_provenance": "rea_pinned_sha256"
+    },
+    {
+      "file": "jadx.zip",
+      "url": "https://github.com/skylot/jadx/releases/download/v1.5.7/jadx-1.5.7.zip",
+      "destination": "jadx",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 74766896,
+      "sha256": "1755e4242ade71a077438723689f404079592ec7764a3a0572f98fef94ebcbf3",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "httrack_x64-noinst-3.51.0.zip",
+      "url": "https://mirror.httrack.com/httrack_x64-noinst-3.51.0.zip",
+      "destination": "httrack",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 11227892,
+      "sha256": "d2d0f09d3a17bff850de58adb76c7ae268158d49c3bca479635e737faaab43d5",
+      "sha256_provenance": "local_sha256"
+    },
+    {
+      "file": "AssetRipper_win_x64.zip",
+      "url": "https://github.com/AssetRipper/AssetRipper/releases/download/2.0.0/AssetRipper_win_x64.zip",
+      "destination": "assetripper",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 44439367,
+      "sha256": "9a7ef0e7c5c3ea5b90b4e6d855e2d98d5f7ec8c3f9e26fccbc194c6a7b01baf7",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "GDRE_tools-v2.7.4-windows.zip",
+      "url": "https://github.com/GDRETools/gdsdecomp/releases/download/v2.7.4/GDRE_tools-v2.7.4-windows.zip",
+      "destination": "godot-re-tools",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 42626001,
+      "sha256": "af24c563eee501effb194d83595de64696c32547b2246034dbfb891a24bfa0ad",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "FModel.zip",
+      "url": "https://github.com/4sval/FModel/releases/download/nov-2026/FModel.zip",
+      "destination": "fmodel",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 21019605,
+      "sha256": "209bef15402dd58010cdb6bad03a799471f2100d671f8d5a52c1e613549b7de1",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "snapshot_2026-05-27_12-11.zip",
+      "url": "https://github.com/x64dbg/x64dbg/releases/download/2026.05.27/snapshot_2026-05-27_12-11.zip",
+      "destination": "x64dbg",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 31526833,
+      "sha256": "d41966dfc5b435a372798245300ca0ab7bb8e48bdbf48512c6fb20fcca427697",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "RenderDoc_1.47_64.zip",
+      "url": "https://renderdoc.org/stable/1.47/RenderDoc_1.47_64.zip",
+      "destination": "renderdoc",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 101729763,
+      "sha256": "b51712e58d40066b34ca30c7869d15f72e4b5c001b2d92232f6783a636d5a3c1",
+      "sha256_provenance": "local_sha256"
+    },
+    {
+      "file": "UEFITool_NE_A76_win64.zip",
+      "url": "https://github.com/LongSoft/UEFITool/releases/download/A76/UEFITool_NE_A76_win64.zip",
+      "destination": "uefi-tools",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 7142260,
+      "sha256": "50901951dee0cee1e7a219dec27f33dca15651e3d82250fa6db0d4a8f2e18b1e",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "UEFIExtract_NE_A76_win64.zip",
+      "url": "https://github.com/LongSoft/UEFITool/releases/download/A76/UEFIExtract_NE_A76_win64.zip",
+      "destination": "uefi-tools",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 497165,
+      "sha256": "0e723a7c57526e1d872d8caa3ff33f1220b1102844d19ec75ebbfb30fb351621",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "qemu-w64-setup-20260811.exe",
+      "url": "https://qemu.weilnetz.de/w64/qemu-w64-setup-20260811.exe",
+      "destination": "qemu",
+      "method": "seven_nsis",
+      "strip_components": 0,
+      "size": 206615928,
+      "sha256": "f98a8aeb5f7faea9765b6dee28316c266cd179d80354a2fed8e50176f9a2e59f",
+      "sha256_provenance": "publisher_sha512"
+    },
+    {
+      "file": "imhex-1.38.1-Windows-Portable-x86_64.zip",
+      "url": "https://github.com/WerWolv/ImHex/releases/download/v1.38.1/imhex-1.38.1-Windows-Portable-x86_64.zip",
+      "destination": "imhex",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 66578670,
+      "sha256": "32520e57712894bc8304c4b01553223e7dda25852326184f99dfd72a09a80187",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "dnSpy-net-win64.zip",
+      "url": "https://github.com/dnSpyEx/dnSpy/releases/download/v6.6.0/dnSpy-net-win64.zip",
+      "destination": "dnspyex",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 99558585,
+      "sha256": "8ed48f165dc355e869f3a0037ad4f9216147f995a5ae0258b296eeef1f73aab0",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "ProcessMonitor.zip",
+      "url": "https://download.sysinternals.com/files/ProcessMonitor.zip",
+      "destination": "process-monitor",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 3203536,
+      "sha256": "97330813853e0e514a11ee16a47d4c6fe90148fae834649839afb30487cc8b0b",
+      "sha256_provenance": "local_sha256"
+    },
+    {
+      "file": "die_win64_4.0.0.zip",
+      "url": "https://github.com/horsicq/DIE-engine/releases/download/4.0.0/die_win64_4.0.0.zip",
+      "destination": "detect-it-easy",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 31415455,
+      "sha256": "522a649e795123ab89bb7963e3b7c0b492af5a1ece8052f1dee04f3d5cd58593",
+      "sha256_provenance": "publisher_sha256"
+    },
+    {
+      "file": "resource_hacker.zip",
+      "url": "https://www.angusj.com/resourcehacker/resource_hacker.zip",
+      "destination": "resource-hacker",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 3389155,
+      "sha256": "52f81ee4778070d6aa72d8719a1a68fea2f288005deb02667542754f747776f8",
+      "sha256_provenance": "local_sha256"
+    },
+    {
+      "file": "Dependencies_x64_Release.zip",
+      "url": "https://github.com/lucasg/Dependencies/releases/download/v1.11.1/Dependencies_x64_Release.zip",
+      "destination": "dependencies",
+      "method": "tar",
+      "strip_components": 0,
+      "size": 4402545,
+      "sha256": "7d22dc00f1c09fd4415d48ad74d1cf801893e83b9a39944b0fce6dea7ceaea99",
+      "sha256_provenance": "local_sha256"
+    }
+  ],
+  "sources": [
+    {
+      "directory": "7zip",
+      "url": "https://github.com/ip7z/7zip.git",
+      "commit": "d3296e39e1f1f92c7b41c0c3848e65640428d42d"
+    },
+    {
+      "directory": "assetripper",
+      "url": "https://github.com/AssetRipper/AssetRipper.git",
+      "commit": "9dc1582ff43f0eebd2363aba98060c5d0a3da4f4"
+    },
+    {
+      "directory": "dependencies",
+      "url": "https://github.com/lucasg/Dependencies.git",
+      "commit": "1997a40000b77bd3326cbc33672a7b9f78bb23f3"
+    },
+    {
+      "directory": "detect-it-easy",
+      "url": "https://github.com/horsicq/Detect-It-Easy.git",
+      "commit": "196c0f56bf53ad8a74b0b56c54829d74b810057e"
+    },
+    {
+      "directory": "dnspyex",
+      "url": "https://github.com/dnSpyEx/dnSpy.git",
+      "commit": "bb09d2c54718e0f73d01d2e1085ddb8772aee555"
+    },
+    {
+      "directory": "fmodel",
+      "url": "https://github.com/4sval/FModel.git",
+      "commit": "70631fbf9aef03410c96635762a8d5c4fdd5d95d"
+    },
+    {
+      "directory": "godot-re-tools",
+      "url": "https://github.com/GDRETools/gdsdecomp.git",
+      "commit": "e2780fcc73ab14083967d3945e513d1f6af1dbd0"
+    },
+    {
+      "directory": "httrack",
+      "url": "https://github.com/xroche/httrack.git",
+      "commit": "0ea3f519022f0e1bc63c0ee9e65258dd54ddb5fe"
+    },
+    {
+      "directory": "imhex",
+      "url": "https://github.com/WerWolv/ImHex.git",
+      "commit": "a761d24e41b269dd2bce18f5218accfabac4684a"
+    },
+    {
+      "directory": "jadx",
+      "url": "https://github.com/skylot/jadx.git",
+      "commit": "3cbbc2348141b7b51dbec2b227f334d6785547e6"
+    },
+    {
+      "directory": "playwright",
+      "url": "https://github.com/microsoft/playwright.git",
+      "commit": "049226728d2da8054db18b04782a9848b755855e"
+    },
+    {
+      "directory": "qemu",
+      "url": "https://github.com/qemu/qemu.git",
+      "commit": "8f66cb79044c370e3813c56ceb7a75a5ca2d0a0e"
+    },
+    {
+      "directory": "renderdoc",
+      "url": "https://github.com/baldurk/renderdoc.git",
+      "commit": "5ad608809c9028da9f5c5082397cb6afe9c8dd17"
+    },
+    {
+      "directory": "uefitool",
+      "url": "https://github.com/LongSoft/UEFITool.git",
+      "commit": "de73942df908b9466c055e15108ac4e4c0b1688c"
+    },
+    {
+      "directory": "x64dbg",
+      "url": "https://github.com/x64dbg/x64dbg.git",
+      "commit": "d3c12dbe92e61bc741c69c1621e668cb4413ac08"
+    }
+  ],
+  "emba_source": {
+    "url": "https://github.com/e-m-b-a/emba.git",
+    "commit": "b22a1d6a42d66d86969b6a2fdf6d1bd8e22dd1eb",
+    "ready": false
+  },
+  "playwright_version": "1.65.1"
+}
